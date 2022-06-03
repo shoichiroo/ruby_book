@@ -84,3 +84,41 @@ a.values_at(0, 2, 4)
 a[-2, 2]
 
 a.last(2)
+
+a = []
+a.push(1)
+a.push(2, 3)
+
+a = [1, 2, 3, 1, 2, 3]
+a.delete(2)
+
+a = [1]
+b = [2, 3]
+a.concat(b)
+
+a = [1, 2, 3]
+b = [3, 4, 5]
+a | b
+a - b
+a & b
+
+require "set"
+
+a = Set[1, 2, 3]
+b = Set[3, 4, 5]
+a | b
+
+e, *f = 100, 200, 300
+f
+
+a = []
+b = [2, 3]
+a.push(1)
+a.push(*b)
+
+def greet(*names)
+  "#{names.join("と")}、こんにちは!"
+end
+
+greet("田中さん", "鈴木さん", "佐藤さん")
+
