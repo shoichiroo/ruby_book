@@ -189,3 +189,59 @@ a = []
 
 a = []
 1.step(10, 2) {|n| a << n}
+
+a = []
+while false
+  a << 1
+end
+
+begin
+  a << 1
+end while false
+
+a = [10, 20, 30, 40, 50]
+until a.size <= 3
+  a.delete_at(-1)
+end
+
+numbers = [1, 2, 3, 4]
+sum = 0
+for n in numbers
+  sum += n
+end
+
+sum = 0
+for n in numbers do sum += n end
+
+numbers = [1, 2, 3, 4, 5]
+loop do
+  n = numbers.sample
+  n
+  break if n == 5
+end
+
+def fanctorial(n)
+  n > 0 ? n * fanctorial(n - 1) : 1
+end
+
+fanctorial(0)
+
+numbers = [1, 2, 3, 4, 5].shuffle
+numbers.each do |n|
+  n
+  break if n == 5
+end
+
+numbers = [1, 2, 3, 4, 5]
+numbers.each do |n|
+  next if n.even?
+  n
+end
+
+foods = ["ピーマン", "トマト", "セロリ"]
+foods.each do |food|
+  print "#{food}は好きですか?"
+  answer = ["はい", "いいえ"].sample
+  puts answer
+  redo unless answer == "はい"
+end
