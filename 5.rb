@@ -68,3 +68,26 @@ def buy_burger(menu, options = {})
   potato = options[:potato]
 end
 
+currencies = {japan: "yen", us: "dollar", india: "rupee"}
+currencies.to_a
+
+array = [[:japan, "yen"], [:us, "dollar"], [:india, "rupee"]]
+array.to_h
+
+h = Hash.new("hello")
+h[:foo]
+
+%s!ruby id fun!
+
+%i!apple orange melon!
+
+string = "apple"
+symbol = :apple
+string.to_sym
+string.to_sym == symbol
+
+limit = nil
+limit ||= 10
+
+!!true
+!!nil
