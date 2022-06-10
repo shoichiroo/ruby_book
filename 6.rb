@@ -125,3 +125,15 @@ text.split(/,|-/)
 text.gsub(",", ":")
 
 text.gsub(/,|-/, ":")
+
+hash = {"," => ":", "-" => "/"}
+text.gsub(/,|-/, hash)
+
+text = "123,456-789"
+text.gsub(/,|-/){|matched|matched == "," ? ":" : "/"}
+
+text = "誕生日は1997年7月17日です"
+text.gsub(/(\d+)年(\d+)月(\d+)日/) do
+  "#{$1}-#{$2}-#{$3}"
+end
+
