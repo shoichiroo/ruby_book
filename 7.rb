@@ -24,7 +24,7 @@ end
 
 
 
-class User
+class Name
   def initialize(name)
     @name = name
   end
@@ -41,8 +41,64 @@ class User
 end
 
 names = ["Alice", "Bob", "Carol"]
-users = User.create_users(names)
-users.each do |user|
-  user.hello
+
+class Product
+  attr_reader :name, :price
+
+  def initialize(name, price)
+    @name = name
+    @price = price
+  end
 end
 
+product = Product.new("A great movie", 1000)
+product.name
+product.price
+
+class DVD < Product
+  attr_reader :running_time
+
+  def initialize(name, price, running_time)
+    super(name, price)
+    @running_time = running_time
+  end
+end
+
+dvd = DVD.new("A great movie", 1000, 120)
+dvd.name
+dvd.price
+dvd.running_time
+
+class Name
+  
+  private
+  
+  def hello
+    "Hello!"
+  end
+end
+
+class User
+  attr_reader :name
+  
+  def initialize(name, weight)
+    @name = name
+    @weight = weight
+  end
+  
+  def heavier_than?(other_user)
+    other_user.weight < @weight
+  end
+  
+  protected
+  
+  def weight
+    @weight
+  end
+end
+
+alice = User.new("Alice", 50)
+bob = User.new("Bob", 60)
+
+alice.heavier_than?(bob)
+bob.heavier_than?(alece
