@@ -101,4 +101,5 @@ alice = User.new("Alice", 50)
 bob = User.new("Bob", 60)
 
 alice.heavier_than?(bob)
-bob.heavier_than?(alece
+bob.heavier_than?(alece)
+
