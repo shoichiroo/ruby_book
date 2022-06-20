@@ -1,18 +1,7 @@
-def method
-  puts "■ ■ ■ ■ ■ ■ ■ ■ ■ ■"
-  puts "■ ■ ■ ■ ■ ■ ■ ■ ■"
-  puts "■ ■ ■ ■ ■ ■ ■ ■"
-  puts "■ ■ ■ ■ ■ ■ ■"
-  puts "■ ■ ■ ■ ■ ■"
-  puts "■ ■ ■ ■ ■"
-  puts "■ ■ ■ ■"
-  puts "■ ■ ■"
-  puts "■ ■"
-  puts "■"
-end
-
-method
-
-
-User = Struct.new(:name, :age)
-tom = User.new("Tom", 30)
+  i = 10
+  while i >= 1
+    puts "■ " * i
+    i -= 1
+  end
+  
+  
